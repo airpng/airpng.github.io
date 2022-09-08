@@ -1,0 +1,98 @@
+.App {
+  text-align: center;
+}
+
+.wrapper {
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  perspective: 2px;
+}
+.section { 
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-shadow: 0 0 5px #000;
+}
+
+.parallax::after {
+  content: " ";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform: translateZ(-1px) scale(1.5);
+  background-size: 100%;
+  z-index: -1;
+}
+
+/* 
+#265E55 - Green 
+#B0AA92 - Beige
+*/
+
+.static {
+  background: #265E55;
+}
+
+.bg1::after {
+  background: transparent no-repeat center;
+  background-size: cover;
+  background-image: url('../assets/pexels-max-vakhtbovych-7031414.jpg');
+  /* -ms-background-size: cover;
+  -o-background-size: cover;
+  -moz-background-size: cover;
+  -webkit-background-size: cover; */
+  background-position: center center; 
+}
+
+
+.bg2::after {
+  background: transparent no-repeat center;
+  background-size: cover;
+  background-image: url('../assets/pexels-expect-best-323780.jpg');
+  background-position: center center; 
+}
+
+.airpng-navbar *{
+  box-sizing: border-box;
+  font-weight: 500;
+  text-shadow: rgb(0, 0, 0) 0px 0px 5px;
+  color: rgb(255, 255, 255) !important;
+}
+
+.dropdown-item{
+  color: black !important;
+  text-shadow: none;
+}
+
+.right-aligned{
+  justify-content:flex-end;
+}
+
+/* Portrait
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: portrait) {
+    .bg1::after{
+      min-height: 100vh;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+} */
+
+/* Landscape */
+/* @media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: landscape) { 
+
+} */
